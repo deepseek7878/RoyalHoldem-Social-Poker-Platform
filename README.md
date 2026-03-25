@@ -37,4 +37,5 @@ Guided deployment available
 Commercial use available
 
 ## 📩 Contact
-(Telegram / Email)
+
+Telegram：@fox_lovemyself/Email：lihongbo9414@gmail.com
