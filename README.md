@@ -60,6 +60,12 @@ Email：lihongbo9414@gmail.com
 
 请联系：  Telegram：@fox_lovemyself  获取视频
 完整演示：从进入大厅 → 创建房间 → 实时对战 → 结算流程
+## 💡 核心优势
+服务端权威逻辑，防作弊能力强
+完整社交与盈利闭环（VIP、筹码商城、锦标赛报名费）
+Docker 一键部署，上手快
+MIT License，商用友好
+代码结构清晰，易于二次开发
 
 ## 🚀 一键部署（快速开始）
 
@@ -183,12 +189,9 @@ RoyalHoldem/
 **Q: 数据库怎么选？**  
 **A:** SQLite(开发) → MongoDB(生产)
 
+感谢 Star 支持！有任何问题或需求，请随时联系。
 
 
-
-
-## 🚀 Deployment
-Guided deployment available
 
 
 
