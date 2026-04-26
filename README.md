@@ -1,9 +1,14 @@
-# 社交德州扑克平台源码 | Social Texas Hold'em Poker Platform Source Code | 德州扑克源码
+# 社交德州扑克平台源码 | Social Texas Hold'em Poker Platform Source Code | 德州扑克源码|德州扑克游戏源码|在线德州扑克平台源码
+**实时多人对战 + 大厅 + 聊天 + 锦标赛 + 筹码系统+支持中文，英文，以及多种语言** 
 
-**社交德州扑克平台源码** · **Social Texas Hold'em Poker Platform** · **德州扑克游戏源码** · **在线德州扑克平台源码**  
-**实时多人对战 + 大厅 + 聊天 + 锦标赛 + 筹码系统** | React + Node.js + Socket.io | Docker 一键部署
+实时多人对战、聊天、锦标赛、筹码系统、房间管理 / Real-time multiplayer, chat, tournaments, chips, rooms / 即時多人對戰、聊天、錦標賽、籌碼、房間管理.
+[![GitHub stars](https://img.shields.io/github/stars/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform)
+[![GitHub forks](https://img.shields.io/github/forks/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform)
+[![GitHub issues](https://img.shields.io/github/issues/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform/issues)
+[![Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://royalholdem-demo.com)
+[![License](https://img.shields.io/github/license/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform/blob/main/LICENSE)
 
-一款**现代、易部署、生产可用**的社交型德州扑克在线平台完整源码。支持大厅（Lobby）、实时多人牌局、房间聊天、锦标赛、虚拟筹码经济、VIP 系统，适合快速搭建 Web/H5 社交德州扑克平台或二次开发。
+一款**现代、易部署、生产可用**的社交型德州扑克在线平台完整源码。支持大厅（Lobby）、实时多人牌局、房间聊天、锦标赛、虚拟筹码经济、VIP 系统，适合快速搭建app 社交德州扑克平台或二次开发。
 
 已验证支持 **5000+ 并发用户**，单实例稳定运行 1000+ 房间，低延迟实时同步，移动端完美适配。
 
@@ -100,16 +105,6 @@ VIP 会员订阅（加速 + 专属皮肤）
 贵族特权销售
 广告与赞助位
 
-# Royal Hold'em - Social Poker Platform
-
-[![GitHub stars](https://img.shields.io/github/stars/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform)
-[![GitHub forks](https://img.shields.io/github/forks/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform)
-[![GitHub issues](https://img.shields.io/github/issues/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform/issues)
-[![Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://royalholdem-demo.com)
-[![License](https://img.shields.io/github/license/deepseek7878/RoyalHoldem-Social-Poker-Platform?style=for-the-badge)](https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform/blob/main/LICENSE)
-
-**社交德州扑克平台 / Social Texas Hold'em Platform / 社交德州撲克平台**  
-实时多人对战、聊天、锦标赛、筹码系统、房间管理 / Real-time multiplayer, chat, tournaments, chips, rooms / 即時多人對戰、聊天、錦標賽、籌碼、房間管理.
 
 ## 🎮 平台功能概览 / Features / 功能概覽
 
@@ -122,54 +117,8 @@ VIP 会员订阅（加速 + 专属皮肤）
 | 🏆 **锦标赛** | 定时赛、淘汰赛、排行榜 | Redis排行 |
 | 💰 **经济系统** | 虚拟筹码、签到奖励、商城 | MongoDB持久化 |
 
-## 🚀 一键部署 / Quick Deploy / 一鍵部署
-
-```bash
-# Docker一键部署 (推荐)
-docker-compose up -d
-
-# 包含: nginx + app + mongodb + redis
-# 自动HTTPS + 域名配置
-```
-
-```bash
-# 手动部署
-git clone https://github.com/deepseek7878/RoyalHoldem-Social-Poker-Platform.git
-cd RoyalHoldem-Social-Poker-Platform
-npm install
-cp .env.example .env
-npm run dev  # 开发模式
-npm start    # 生产模式
-```
-
-**支持云部署：Vercel / Railway / Render / 自建服务器**
-
-## 📩 Contact联系
-
-Telegram：@fox_lovemyself
 
 
-Email：lihongbo9414@gmail.com
-
-## 📱 实时演示截图 / Live Demo Screenshots / 即時示範截圖
-
-<img width="1280" height="720" alt="大厅01" src="https://github.com/user-attachments/assets/14bcc7c2-0c97-41c2-b3bf-d799ea1463d6" />
-
-![大厅-俱乐部](https://github.com/user-attachments/assets/1cb236f7-2873-430c-a19c-a0420cab13bc)
-![011](https://github.com/user-attachments/assets/cd9bd0e5-60ba-47f7-a0df-d5596b4dede5)
-![08](https://github.com/user-attachments/assets/5fe7b7d0-2e2a-472f-be16-d27eb030bb82)
-![07-亮手牌](https://github.com/user-attachments/assets/138dcc3a-1bee-4bc4-980a-1186213d1ae2)
-![06-9人桌](https://github.com/user-attachments/assets/0165cd32-bb19-4754-accc-3b33fd46bbfb)
-![03](https://github.com/user-attachments/assets/33973b2b-8c71-423e-8c96-61ac9b977914)
-![01](https://github.com/user-attachments/assets/4aa66163-4ef1-44e6-b834-7460fb60f4d8)
-## 🏗️ 完整技术栈 / Tech Stack / 技術棧
-Frontend: React 18 + TypeScript + TailwindCSS
-Backend: Node.js + Express + Socket.io
-Database: MongoDB + Redis (排行/会话)
-Game Engine: Custom Texas Hold'em (服务器权威)
-Auth: JWT + OAuth (Google/GitHub)
-Deploy: Docker + Nginx + PM2
-Monitor: Sentry + Prometheus
 
 
 ## 🎮 用户完整流程 / User Journey / 用戶流程
@@ -198,40 +147,7 @@ Monitor: Sentry + Prometheus
 ✅ Docker生产级部署
 ✅ 移动端完美适配
 
-## 🔌 核心API / Core APIs / 核心API
 
-```javascript
-// 创建房间
-POST /api/rooms
-{
-  "blinds":,[1][2]
-  "maxPlayers": 9,
-  "isPrivate": true,
-  "password": "123"
-}
-
-// 玩家行动
-POST /api/game/:roomId/action
-{
-  "action": "raise",
-  "amount": 60,
-  "playerId": "uuid"
-}
-
-// 锦标赛报名
-POST /api/tournaments/:id/join
-```
-
-## 📊 性能指标 / Performance Metrics / 效能指標
-
-| 指标 | 单机 | 1000并发 |
-|------|------|----------|
-| 房间延迟 | 25ms | 45ms |
-| 牌型判断 | 0.8ms | 1.2ms |
-| 内存占用 | 180MB | 2.1GB |
-| CPU占用 | 12% | 65% |
-
-**支持5000+并发用户，单实例1000房间稳定**
 
 ## 🎯 商业模式 / Monetization / 商業模式
 
@@ -241,13 +157,7 @@ POST /api/tournaments/:id/join
 👑 贵族特权 (私房优先)
 💰 筹码商城
 
-## 🛠️ 一键部署方案 / Deployment Options / 一鍵部署方案
 
-### **Docker (推荐)**
-```bash
-docker-compose up -d
-# 自动: nginx+app+mongo+redis
-```
 
 ## 📦 版本发布 / Releases / 版本發佈
 
@@ -291,7 +201,7 @@ RoyalHoldem/
 │ │ └── stats/
 └── docker/ # 一键部署
 
-text
+
 
 ## 🤝 贡献指南 / Contributing / 貢獻指南
 ✅ 新游戏模式 (Omaha)
@@ -301,11 +211,6 @@ text
 ✅ 性能优化
 ✅ 安全加固
 
-text
-
-## 📄 开源许可 / License / 授權
-MIT License - 社交游戏商用顶级友好
-Copyright (c) 2026 deepseek7878
 
 
 
