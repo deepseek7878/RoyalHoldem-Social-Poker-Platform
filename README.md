@@ -1,4 +1,4 @@
-# 社交德州扑克平台源码 | Social Texas Hold'em Poker Platform Source Code | 德州扑克源码|德州扑克游戏源码|在线德州扑克平台源码
+# 社交德州扑克平台源码 | Social Texas Hold'em Poker Platform Source Code | 德州扑克源码|德州扑克游戏源码|在线德州扑克平台源码|德州金币大厅|德州积分大厅
 **实时多人对战 + 大厅 + 聊天 + 锦标赛 + 筹码系统+支持中文，英文，以及多种语言** 
 
 实时多人对战、聊天、锦标赛、筹码系统、房间管理 / Real-time multiplayer, chat, tournaments, chips, rooms / 即時多人對戰、聊天、錦標賽、籌碼、房間管理.
