@@ -4,48 +4,31 @@
 #include <string>
 #include <map>
 
-#include "globe.h"
 #include "servant/Application.h"
+#include "globe.h"
 #include "OuterFactory.h"
+#include "util/tc_hash_fun.h"
 
 //wbl
 #include <wbl/regex_util.h>
-#include <wbl/stream_util.h>
 
-//db config
-typedef struct _TDBConfig
-{
-    string Domain;       //域名
-    string strDBHost;    //主机IP
-    string strDBUser;    //DB用户名
-    string strDBPwd;     //DB密码
-    string strDBName;    //DB名字
-    string strDBCharSet; //表的字符集
-    int iDBPort;         //DB监听端口
-} DBConfig;
+//配置服务
+#include "ConfigServant.h"
+#include "DBAgentServant.h"
+#include "ActivityServant.h"
+//
+using namespace config;
+using namespace dataproxy;
+using namespace dbagent;
+using namespace activity;
 
-//log config
-typedef struct _TLogConfigItem
-{
-    string field;   //字段名
-    int type;       //字段类型
-} TLogConfigItem;
-
-//日志配置
-typedef struct _TLogConfig
-{
-    DBConfig dbConfig;  //数据库配置
-    string tablename;   //表名
-    vector<TLogConfigItem> vecLogConfigItems;  //字段
-} TLogConfig;
-
+//
+#define ONE_DAY_TIME (24*60*60)
+#define ZONE_TIME_OFFSET (8*60*60)
 
 //
 class OuterFactoryImp;
 typedef TC_AutoPtr<OuterFactoryImp> OuterFactoryImpPtr;
-
-//
-// using namespace DaqiGame;
 
 /**
  * 外部工具接口对象工厂
@@ -63,9 +46,9 @@ private:
     */
     ~OuterFactoryImp();
 
-    //
-    friend class Log2DBServantImp;
-    friend class Log2DBServer;
+    ///
+    friend class GameRecordServantImp;
+    friend class GameRecordServer;
 
 public:
     //框架中用到的outer接口(不能修改):
@@ -80,54 +63,61 @@ public:
     }
 
 public:
-    //加载配置
-    bool reloadConfig();
-    //
-    bool reloadConfig(const std::string &cmd, std::string &des);
     //读取所有配置
     void load();
-    //db配置
-    void readDBConfig();
-    //打印db配置
-    void printDBConfig();
-    //取db配置
-    DBConfig &getDBConfig();
-    //log配置
-    void readLogConfig();
-    //打印log配置
-    void printLogConfig();
-    //取log配置
-    const map<int, TLogConfig> &getLogConfig();
-    //根据序号取log配置
-    int getLogConfigByID(int id, TLogConfig &tLogConfig);
+
+    //代理配置
+    void readPrxConfig();
+    //打印代理配置
+    void printPrxConfig();
 
 private:
-    //
+    /**
+     *
+    */
     void createAllObject();
-    //
+
+    /**
+     *
+    */
     void deleteAllObject();
 
 public:
+    //游戏配置服务代理
+    const ConfigServantPrx getConfigServantPrx();
+    //数据库代理服务代理
+    const DBAgentServantPrx getDBAgentServantPrx(const long uid);
+    //数据库代理服务代理
+    const DBAgentServantPrx getDBAgentServantPrx(const string key);
+
+    const ActivityServantPrx getActivityServantPrx(const long uid);
+public:
     //格式化时间
-    string GetTLogTimeFormat();
+    string GetTimeFormat();
 
 private:
     //拆分字符串成整形
     int splitInt(string szSrc, vector<int> &vecInt);
 
 private:
-    //
-    wbl::ReadWriteLocker m_rwlock;
+    wbl::ReadWriteLocker m_rwlock;  //读写锁，防止脏读
+
+private:
     //框架用到的共享对象(不能修改):
     tars::TC_Config *_pFileConf;
-    //
-    OuterProxyFactoryPtr _pProxyFactory;
-    //db config
-    DBConfig dbConfig;
 
-public:
-    //日志配置
-    map<int, TLogConfig> mapLogConfig;
+    OuterProxyFactoryPtr _pProxyFactory;
+
+private:
+    //游戏配置服务
+    std::string _ConfigServantObj;
+    ConfigServantPrx _ConfigServerPrx;
+    //数据库代理服务
+    std::string _DBAgentServantObj;
+    DBAgentServantPrx _DBAgentServerPrx;
+    // ActivityServer的对象名称
+    std::string _ActivityServantObj;
+    activity::ActivityServantPrx _ActivityServantPrx;
 };
 
 ////////////////////////////////////////////////////////////////////////////////
